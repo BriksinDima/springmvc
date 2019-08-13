@@ -17,10 +17,10 @@
     <th scope="col">Gender</th>
     <th scope="col">Married</th>
     <th scope="col">Children</th>
-    <th scope="col">birthDate</th>
-    <th scope="col">employmentTypeId</th>
-    <th scope="col">cardHolder</th>
-    <th scope="col">incomeStatementId<th>
+    <th scope="col">Birth Date</th>
+    <th scope="col">Employment Type Id</th>
+    <th scope="col">Card Holder</th>
+    <th scope="col">Income Statement<th>
 </tr>
 </thead>
 <tbody>
@@ -32,7 +32,7 @@
         <td><c:out value="${clientCard.borrower.personalData.birthDate}"/></td>
         <td><c:out value="${clientCard.borrower.personalData.employmentTypeId}"/></td>
         <td><c:out value="${clientCard.borrower.personalData.cardHolder}"/></td>
-        <td><c:out value="${clientCard.borrower.personalData.incomeStatementId}"/></td>
+        <td><c:out value="${clientCard.borrower.personalData.incomeStatement}"/></td>
         <td><a href="${pageContext.request.contextPath}/controller/clientCards/${clientCard.id}">more details</a></td>
         <td>
         <a href="${pageContext.request.contextPath}/controller/delete/${clientCard.id}">more details</a>

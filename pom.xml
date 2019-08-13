@@ -11,8 +11,7 @@
     <modules>
         <module>model</module>
         <module>mvc</module>
-        <module>dictionary</module>
-        <module>ui</module>
+        <module>test</module>
     </modules>
     <dependencyManagement>
         <dependencies>

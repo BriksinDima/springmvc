@@ -21,7 +21,7 @@ public class PersonalData {
     private Boolean cardHolder;
 
     @Column(name="income_statement_id")
-    private Boolean incomeStatementId;
+    private Boolean incomeStatement;
 
     public LocalDate getBirthDate() {
         return birthDate;
@@ -47,12 +47,12 @@ public class PersonalData {
         this.cardHolder = cardHolder;
     }
 
-    public Boolean getIncomeStatementId() {
-        return incomeStatementId;
+    public Boolean getIncomeStatement() {
+        return incomeStatement;
     }
 
-    public void setIncomeStatementId(Boolean incomeStatementId) {
-        this.incomeStatementId = incomeStatementId;
+    public void setIncomeStatement(Boolean incomeStatement) {
+        this.incomeStatement = incomeStatement;
     }
 
     @Override
@@ -61,7 +61,7 @@ public class PersonalData {
                 "birthDate=" + birthDate +
                 ", employmentTypeId=" + employmentTypeId +
                 ", cardHolder=" + cardHolder +
-                ", incomeStatementId=" + incomeStatementId +
+                ", incomeStatement=" + incomeStatement +
                 '}';
     }
 }

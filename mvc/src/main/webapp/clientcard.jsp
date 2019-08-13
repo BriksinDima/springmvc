@@ -19,15 +19,15 @@
          <tr> <td>Gedner</td>        <td><c:out value="${clientCard.borrower.gender}"/></td> </tr>
           <tr> <td>Married</td>        <td><c:out value="${clientCard.borrower.married}"/></td></tr>
           <tr> <td>Children</td>        <td><c:out value="${clientCard.borrower.children}"/></td></tr>
-          <tr> <td>BirthDate</td>        <td><c:out value="${clientCard.borrower.personalData.birthDate}"/></td></tr>
-          <tr> <td>employmentTypeId</td>        <td><c:out value="${clientCard.borrower.personalData.employmentTypeId}"/></td></tr>
-          <tr> <td>cardHolder</td>        <td><c:out value="${clientCard.borrower.personalData.cardHolder}"/></td></tr>
-          <tr> <td>incomeStatementId</td>        <td><c:out value="${clientCard.borrower.personalData.incomeStatementId}"/></td></tr>
+          <tr> <td>Birth Date</td>        <td><c:out value="${clientCard.borrower.personalData.birthDate}"/></td></tr>
+          <tr> <td>Employment Type Id</td>        <td><c:out value="${clientCard.borrower.personalData.employmentTypeId}"/></td></tr>
+          <tr> <td>Card Holder</td>        <td><c:out value="${clientCard.borrower.personalData.cardHolder}"/></td></tr>
+          <tr> <td>Income Statement</td>        <td><c:out value="${clientCard.borrower.personalData.incomeStatement}"/></td></tr>
 
-          <tr> <td>Sub-borrower BirthDate</td>        <td><c:out value="${clientCard.subBorrower.personalData.birthDate}"/></td></tr>
-          <tr> <td>Sub-borrower employmentTypeId</td>        <td><c:out value="${clientCard.subBorrower.personalData.employmentTypeId}"/></td></tr>
-          <tr> <td>Sub-borrower cardHolder</td>        <td><c:out value="${clientCard.subBorrower.personalData.cardHolder}"/></td></tr>
-          <tr> <td>Sub-borrower incomeStatementId</td>        <td><c:out value="${clientCard.subBorrower.personalData.incomeStatementId}"/></td></tr>
+          <tr> <td>Sub-borrower Birth Date</td>        <td><c:out value="${clientCard.subBorrower.personalData.birthDate}"/></td></tr>
+          <tr> <td>Sub-borrower Employment Type Id</td>        <td><c:out value="${clientCard.subBorrower.personalData.employmentTypeId}"/></td></tr>
+          <tr> <td>Sub-borrower Card Holder</td>        <td><c:out value="${clientCard.subBorrower.personalData.cardHolder}"/></td></tr>
+          <tr> <td>Sub-borrower Income Statement</td>        <td><c:out value="${clientCard.subBorrower.personalData.incomeStatement}"/></td></tr>
 
           <tr> <td>Goal</td>        <td><c:out value="${clientCard.goal.typeId}"/></td></tr>
           <c:forEach items="${clientCard.applicationList}" var="application">
@@ -36,4 +36,7 @@
           </c:forEach>
         </tbody>
     </table>
+
+    <a href="${pageContext.request.contextPath}/controller/clientcards"><<return</a>
+
 </html>
