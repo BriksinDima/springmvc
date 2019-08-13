@@ -1,13 +1,12 @@
-package com.spring.mvc.rest;
+package com.spring.mvc.contoller;
 
 import com.model.entities.ClientCard;
 import com.spring.mvc.service.ClientCardService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 @RequestMapping("/controller")
@@ -28,10 +27,19 @@ public class ClientCardController {
         return "clientcard";
     }
 
-    @PostMapping("/clientCards")
-    public ClientCard addClientCard(@RequestBody ClientCard clientCard) {
+
+    @RequestMapping(value = "addClientCard", method = RequestMethod.GET)
+    public String addClientCard(Model model){
+        model.addAttribute("clientCard",new ClientCard());
+        return "add-client-card";
+    }
+
+    @RequestMapping(value = "addClientCard", method = RequestMethod.POST,
+            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE,
+            produces = {MediaType.APPLICATION_ATOM_XML_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public String addClientCard(@ModelAttribute("clientCard") ClientCard clientCard) {
         clientCardService.saveClientCard(clientCard);
-        return clientCard;
+        return "clientcard";
     }
 
     @PutMapping("/clientCards")

@@ -1,5 +1,7 @@
 package com.model.entities.personaldata;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import java.time.LocalDate;
@@ -9,6 +11,7 @@ import java.time.LocalDate;
 public class PersonalData {
 
     @Column(name="birth_date")
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private LocalDate birthDate;
 
     @Column(name="employment_type_id")

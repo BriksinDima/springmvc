@@ -1,26 +1,31 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <html>
+<head>
+    <link href="<spring:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+    <script type=text/javascript" src="<spring:url value="/resources/js/bootstrap.bundle.min.js" />"></script>
+</head>
 <body>
 
 <h3>Client card list</h3>
 
 <hr>
 
-<table>
+<table  class="table">
 <thead>
 <tr>
-    <th>Gender</th>
-    <th>Married</th>
-    <th>Children</th>
-    <th>birthDate</th>
-    <th>employmentTypeId</th>
-    <th>cardHolder</th>
-    <th>incomeStatementId<th>
+    <th scope="col">Gender</th>
+    <th scope="col">Married</th>
+    <th scope="col">Children</th>
+    <th scope="col">birthDate</th>
+    <th scope="col">employmentTypeId</th>
+    <th scope="col">cardHolder</th>
+    <th scope="col">incomeStatementId<th>
 </tr>
 </thead>
 <tbody>
 <c:forEach items="${clientCards}" var="clientCard">
-    <tr>
+    <tr scope="row">
         <td><c:out value="${clientCard.borrower.gender}"/></td>
         <td><c:out value="${clientCard.borrower.married}"/></td>
         <td><c:out value="${clientCard.borrower.children}"/></td>
@@ -37,7 +42,7 @@
 </tbody>
 </table>
 
-
+<a href="${pageContext.request.contextPath}/controller/addClientCard">add client card</a>
 
 
 </body>

@@ -1,5 +1,10 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
+<head>
+    <link "text/javascript" href="<spring:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+    <title>Client Card</title>
+</head>
 <body>
 
 <h3>Spring CRM REST Demo</h3>
@@ -9,7 +14,7 @@
 <h3>client card </h3>
 
 </body>
-    <table>
+    <table class="table">
         <tbody>
          <tr> <td>Gedner</td>        <td><c:out value="${clientCard.borrower.gender}"/></td> </tr>
           <tr> <td>Married</td>        <td><c:out value="${clientCard.borrower.married}"/></td></tr>
