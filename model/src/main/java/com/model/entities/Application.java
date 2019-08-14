@@ -7,18 +7,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="application")
-public class Appliaction extends BaseEntity {
+public class Application extends BaseEntity {
 
-    private Integer salary;
+    private Integer amount;
 
     private Integer duration;
 
-    public Integer getSalary() {
-        return salary;
+    public Integer getAmount() {
+        return amount;
     }
 
-    public void setSalary(Integer salary) {
-        this.salary = salary;
+    public void setAmount(Integer amount) {
+        this.amount = amount;
     }
 
     public Integer getDuration() {
@@ -29,18 +29,18 @@ public class Appliaction extends BaseEntity {
         this.duration = duration;
     }
 
-    public Appliaction(Integer salary, Integer duration) {
-        this.salary = salary;
-        this.duration = duration;
+    public Application() {
     }
 
-    public Appliaction() {
+    public Application(Integer amount, Integer duration) {
+        this.amount = amount;
+        this.duration = duration;
     }
 
     @Override
     public String toString() {
         return "Appliaction{" +
-                "salary=" + salary +
+                "amount=" + amount +
                 ", duration=" + duration +
                 '}';
     }

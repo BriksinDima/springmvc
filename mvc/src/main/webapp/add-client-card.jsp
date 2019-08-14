@@ -41,10 +41,11 @@
     </div>
     <div class="form-group col-md-4">
         <form:select path="borrower.personalData.employmentTypeId" class="custom-select custom-select-sm">
+         <form:label path="borrower.personalData.employmentTypeId"  for="inputAddress">Type employee</form:label>
            <form:option value="0" label="--- Select ---"/>
-           <form:options value="1" label="Госслужащий" />
-           <form:options value="2" label="Военнослужащий" />
-           <form:options value="3" label="Наемный рабочий" />
+           <form:option value="1" label="Military" />
+           <form:option value="2" label="Government"/>
+           <form:option value="3" label="Employee" />
         </form:select>
     </div>
     <div class="form-group col-md-4">
@@ -78,11 +79,12 @@
     </div>
 
     <div class="form-group col-md-4">
+            <form:label path="subBorrower.personalData.employmentTypeId"  for="inputAddress">Type employee</form:label>
             <form:select path="subBorrower.personalData.employmentTypeId" class="custom-select custom-select-sm">
                <form:option value="0" label="--- Select ---"/>
-               <form:options value="1" label="Госслужащий" />
-               <form:options value="2" label="Военнослужащий" />
-               <form:options value="3" label="Наемный рабочий" />
+               <form:option value="1" label="Military" />
+               <form:option value="2" label="Government" />
+               <form:option value="3" label="Citizen" />
             </form:select>
         </div>
 
@@ -106,6 +108,16 @@
             </div>
         </div>
      </div>
+    <div class="form-group col-md-4">
+    <form:label path="goal.typeId"  for="inputAddress">Goal</form:label>
+        <form:select path="goal.typeId" class="custom-select custom-select-sm">
+            <form:option value="0" label="--- Select ---"/>
+            <form:option value="1" label="Home"/>
+            <form:option value="2" label="Car"/>
+            <form:option value="3" label="Insurance"/>
+        </form:select>
+    </div>
+
     <button type="submit" class="btn btn-primary">Submit</button>
 
 

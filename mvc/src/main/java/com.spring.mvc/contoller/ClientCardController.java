@@ -1,5 +1,6 @@
 package com.spring.mvc.contoller;
 
+import com.model.entities.Application;
 import com.model.entities.ClientCard;
 import com.spring.mvc.service.ClientCardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,16 +43,10 @@ public class ClientCardController {
         return "clientcard";
     }
 
-    @PutMapping("/clientCards")
-    public ClientCard updateClientCard(@RequestBody ClientCard clientCard) {
-        clientCardService.saveClientCard(clientCard);
-        return clientCard;
-
-    }
-
-    @DeleteMapping("/clientCards/{clientCardId}")
-    public String deleteClientCard(@PathVariable String clientCardId) {
-        clientCardService.deleteClientCard(clientCardId);
-        return "Deleted clientCard id - " + clientCardId;
+    @RequestMapping(value = "clientCard/{clientCardId}/addapplication", method = RequestMethod.GET)
+    public String getApplication(@PathVariable String clientCardId, Model model){
+        model.addAttribute("clientCardId", clientCardId);
+        model.addAttribute(new Application());
+        return "addApplication";
     }
 }

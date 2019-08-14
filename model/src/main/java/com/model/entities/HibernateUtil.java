@@ -31,7 +31,7 @@ public class HibernateUtil {
                 configuration.addAnnotatedClass(ClientCard.class);
                 configuration.addAnnotatedClass(Borrower.class);
                 configuration.addAnnotatedClass(SubBorrower.class);
-                configuration.addAnnotatedClass(Appliaction.class);
+                configuration.addAnnotatedClass(Application.class);
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties()).build();
                 sessionFactory = configuration.buildSessionFactory(serviceRegistry);

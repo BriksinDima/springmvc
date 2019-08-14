@@ -24,11 +24,11 @@ public class ClientCard extends BaseEntity {
     private Goal goal;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinTable(name="clientcard_appliaction",
+    @JoinTable(name="clientcard_application",
             joinColumns = @JoinColumn(name="card_id"),
             inverseJoinColumns = @JoinColumn(name="application_id")
     )
-    private List<Appliaction> applicationList;
+    private List<Application> applicationList;
 
     public Borrower getBorrower() {
         return borrower;
@@ -54,11 +54,11 @@ public class ClientCard extends BaseEntity {
         this.goal = goal;
     }
 
-    public List<Appliaction> getApplicationList() {
+    public List<Application> getApplicationList() {
         return applicationList;
     }
 
-    public void setApplicationList(List<Appliaction> applicationList) {
+    public void setApplicationList(List<Application> applicationList) {
         this.applicationList = applicationList;
     }
 }

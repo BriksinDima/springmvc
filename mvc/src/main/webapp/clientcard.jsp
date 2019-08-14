@@ -31,12 +31,12 @@
 
           <tr> <td>Goal</td>        <td><c:out value="${clientCard.goal.typeId}"/></td></tr>
           <c:forEach items="${clientCard.applicationList}" var="application">
-             <tr> <td>Application salary </td>        <td><c:out value="${application.salary}"/></td></tr>
+             <tr> <td>Application amount of money </td>        <td><c:out value="${application.amount}"/></td></tr>
              <tr> <td>Application duration </td>        <td><c:out value="${application.duration}"/></td></tr>
           </c:forEach>
         </tbody>
     </table>
 
     <a href="${pageContext.request.contextPath}/controller/clientcards"><<return</a>
-
+    <a href="${pageContext.request.contextPath}/controller/clientCard/'${clientCard.id}'/addapplication"><<return</a>
 </html>

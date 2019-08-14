@@ -1,6 +1,6 @@
 package com.spring.mvc.service;
 
-import com.model.entities.Appliaction;
+import com.model.entities.Application;
 import com.model.entities.ClientCard;
 import com.model.entities.personaldata.PersonalData;
 import com.spring.mvc.dao.ClientCardDao;
@@ -38,8 +38,8 @@ public class DetermineOfferRateServiceImpl implements DetermineOfferRateService 
         if(cardHolder)return rate-=0.5;
         return rate;
     }
-    private Double checkApplication(Double rate, Appliaction application){
-        if(application.getSalary() > 30000 || application.getDuration() > 360)return rate-=3;
+    private Double checkApplication(Double rate, Application application){
+        if(application.getAmount() > 30000 || application.getDuration() > 360)return rate-=3;
         return rate;
     }
 
